@@ -137,4 +137,14 @@ const resultado = alunos.map(aluno => {
     return null
 })
 
-console.log(resultado)
+// console.log(resultado)
+
+const numeros = [1, 2, 3, a, b];
+
+let valores = numeros
+.flatMap((item) =>
+    typeof item === "number" ? item : item.flatMap((obj) => Object.values(obj)),
+)
+.map((i) => i * 2);
+
+console.log(valores);
